@@ -1,0 +1,70 @@
+
+================ DATASET: csv_dataset: ../datasets/spam.csv (key col 1) ================
+
+HASH: std::hash            | ns_per_op         : 47.005022    | ops_per_sec       : 21274322.369902 | collision_rate    : 0.817399     | entropy           : 9.811904     | memory_bits       : 178400.000000 | attack_score      : 1.000000    
+
+HASH: CRC32                | ns_per_op         : 422.241794   | ops_per_sec       : 2368311.272992 | collision_rate    : 0.817937     | entropy           : 9.806842     | memory_bits       : 178400.000000 | attack_score      : 1.000000    
+
+HASH: MurmurHash3_x86_32   | ns_per_op         : 113.808610   | ops_per_sec       : 8786681.439849 | collision_rate    : 0.818475     | entropy           : 9.783962     | memory_bits       : 178400.000000 | attack_score      : 1.000000    
+
+HASH: xxHash64             | ns_per_op         : 79.620628    | ops_per_sec       : 12559559.345326 | collision_rate    : 0.818117     | entropy           : 9.797850     | memory_bits       : 356800.000000 | attack_score      : 4.000000    
+
+HASH: CityHash64           | ns_per_op         : 62.494170    | ops_per_sec       : 16001492.515894 | collision_rate    : 0.819013     | entropy           : 9.751677     | memory_bits       : 356800.000000 | attack_score      : 4.000000    
+
+HASH: SHA256               | ns_per_op         : 451.270493   | ops_per_sec       : 2215965.845110 | collision_rate    : 0.818475     | entropy           : 9.799161     | memory_bits       : 1427200.000000 | attack_score      : 10.000000   
+
+================ DATASET: csv_dataset: ../datasets/transaction_data.csv (key col 0) ================
+
+HASH: std::hash            | ns_per_op         : 35.971029    | ops_per_sec       : 27800149.970839 | collision_rate    : 0.352647     | entropy           : 9.182843     | memory_bits       : 32032.000000 | attack_score      : 1.000000    
+
+HASH: CRC32                | ns_per_op         : 116.713287   | ops_per_sec       : 8568004.793289 | collision_rate    : 0.353646     | entropy           : 9.181968     | memory_bits       : 32032.000000 | attack_score      : 1.000000    
+
+HASH: MurmurHash3_x86_32   | ns_per_op         : 54.237762    | ops_per_sec       : 18437338.834451 | collision_rate    : 0.353646     | entropy           : 9.175731     | memory_bits       : 32032.000000 | attack_score      : 1.000000    
+
+HASH: xxHash64             | ns_per_op         : 52.366633    | ops_per_sec       : 19096129.266106 | collision_rate    : 0.343656     | entropy           : 9.195975     | memory_bits       : 64064.000000 | attack_score      : 4.000000    
+
+HASH: CityHash64           | ns_per_op         : 37.874126    | ops_per_sec       : 26403249.630724 | collision_rate    : 0.959041     | entropy           : 5.274313     | memory_bits       : 64064.000000 | attack_score      : 4.000000    
+
+HASH: SHA256               | ns_per_op         : 119.806194   | ops_per_sec       : 8346813.868552 | collision_rate    : 0.373626     | entropy           : 9.133912     | memory_bits       : 256256.000000 | attack_score      : 10.000000   
+
+================ DATASET: csv_dataset: ../datasets/URL_Classification.csv (key col 1) ================
+
+HASH: std::hash            | ns_per_op         : 47.924546    | ops_per_sec       : 20866133.827243 | collision_rate    : 0.999345     | entropy           : 9.999526     | memory_bits       : 50015200.000000 | attack_score      : 1.000000    
+
+HASH: CRC32                | ns_per_op         : 266.826920   | ops_per_sec       : 3747747.784558 | collision_rate    : 0.999345     | entropy           : 9.999485     | memory_bits       : 50015200.000000 | attack_score      : 1.000000    
+
+HASH: MurmurHash3_x86_32   | ns_per_op         : 86.471578    | ops_per_sec       : 11564493.448033 | collision_rate    : 0.999345     | entropy           : 9.999479     | memory_bits       : 50015200.000000 | attack_score      : 1.000000    
+
+HASH: xxHash64             | ns_per_op         : 64.882643    | ops_per_sec       : 15412442.422193 | collision_rate    : 0.999345     | entropy           : 9.999528     | memory_bits       : 100030400.000000 | attack_score      : 4.000000    
+
+HASH: CityHash64           | ns_per_op         : 48.707164    | ops_per_sec       : 20530860.892996 | collision_rate    : 0.999345     | entropy           : 9.892364     | memory_bits       : 100030400.000000 | attack_score      : 4.000000    
+
+HASH: SHA256               | ns_per_op         : 286.378300   | ops_per_sec       : 3491884.681048 | collision_rate    : 0.999345     | entropy           : 9.999524     | memory_bits       : 400121600.000000 | attack_score      : 10.000000   
+
+================ DATASET: csv_dataset: ../datasets/words_pos.csv (key col 1) ================
+
+HASH: std::hash            | ns_per_op         : 41.131926    | ops_per_sec       : 24312014.865433 | collision_rate    : 0.997233     | entropy           : 9.997944     | memory_bits       : 11843232.000000 | attack_score      : 1.000000    
+
+HASH: CRC32                | ns_per_op         : 108.967160   | ops_per_sec       : 9177076.810140 | collision_rate    : 0.997233     | entropy           : 9.997890     | memory_bits       : 11843232.000000 | attack_score      : 1.000000    
+
+HASH: MurmurHash3_x86_32   | ns_per_op         : 57.284695    | ops_per_sec       : 17456669.630189 | collision_rate    : 0.997233     | entropy           : 9.998026     | memory_bits       : 11843232.000000 | attack_score      : 1.000000    
+
+HASH: xxHash64             | ns_per_op         : 50.158176    | ops_per_sec       : 19936929.228833 | collision_rate    : 0.997233     | entropy           : 9.998059     | memory_bits       : 23686464.000000 | attack_score      : 4.000000    
+
+HASH: CityHash64           | ns_per_op         : 37.842254    | ops_per_sec       : 26425487.324368 | collision_rate    : 0.997236     | entropy           : 9.195487     | memory_bits       : 23686464.000000 | attack_score      : 4.000000    
+
+HASH: SHA256               | ns_per_op         : 106.342588   | ops_per_sec       : 9403570.318418 | collision_rate    : 0.997233     | entropy           : 9.997924     | memory_bits       : 94745856.000000 | attack_score      : 10.000000   
+
+================ DATASET: csv_dataset: ../datasets/users.csv (key col 0) ================
+
+HASH: std::hash            | ns_per_op         : 43.959711    | ops_per_sec       : 22748102.157077 | collision_rate    : 0.999960     | entropy           : 9.999970     | memory_bits       : 827703712.000000 | attack_score      : 1.000000    
+
+HASH: CRC32                | ns_per_op         : 121.653192   | ops_per_sec       : 8220088.431520 | collision_rate    : 0.999960     | entropy           : 9.999972     | memory_bits       : 827703712.000000 | attack_score      : 1.000000    
+
+HASH: MurmurHash3_x86_32   | ns_per_op         : 61.003466    | ops_per_sec       : 16392511.316566 | collision_rate    : 0.999960     | entropy           : 9.999971     | memory_bits       : 827703712.000000 | attack_score      : 1.000000    
+
+HASH: xxHash64             | ns_per_op         : 55.037835    | ops_per_sec       : 18169319.205440 | collision_rate    : 0.999960     | entropy           : 9.999971     | memory_bits       : 1655407424.000000 | attack_score      : 4.000000    
+
+HASH: CityHash64           | ns_per_op         : 41.292708    | ops_per_sec       : 24217350.675995 | collision_rate    : 0.999960     | entropy           : 9.718962     | memory_bits       : 1655407424.000000 | attack_score      : 4.000000    
+
+HASH: SHA256               | ns_per_op         : 124.718034   | ops_per_sec       : 8018086.616220 | collision_rate    : 0.999960     | entropy           : 9.999973     | memory_bits       : 6621629696.000000 | attack_score      : 10.000000   

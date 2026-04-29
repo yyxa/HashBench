@@ -1,0 +1,45 @@
+
+========== DATASET: csv_dataset: ../datasets/spam.csv (key col 1) ==========
+HASH                     SCORE          
+SHA256                   0.704799       
+std::hash                0.378818       
+CityHash64               0.376005       
+xxHash64                 0.336475       
+CRC32                    0.330787       
+MurmurHash3_x86_32       0.252188       
+
+========== DATASET: csv_dataset: ../datasets/transaction_data.csv (key col 0) ==========
+HASH                     SCORE          
+SHA256                   0.66898        
+CityHash64               0.412698       
+xxHash64                 0.345405       
+std::hash                0.329323       
+MurmurHash3_x86_32       0.272467       
+CRC32                    0.249884       
+
+========== DATASET: csv_dataset: ../datasets/URL_Classification.csv (key col 1) ==========
+HASH                     SCORE          
+SHA256                   0.665226       
+xxHash64                 0.353661       
+CRC32                    0.333194       
+std::hash                0.330065       
+MurmurHash3_x86_32       0.26554        
+CityHash64               0.246032       
+
+========== DATASET: csv_dataset: ../datasets/words_pos.csv (key col 1) ==========
+HASH                     SCORE          
+SHA256                   0.662419       
+CityHash64               0.412698       
+xxHash64                 0.370375       
+CRC32                    0.333268       
+std::hash                0.306942       
+MurmurHash3_x86_32       0.286549       
+
+========== DATASET: csv_dataset: ../datasets/users.csv (key col 0) ==========
+HASH                     SCORE          
+SHA256                   0.658428       
+xxHash64                 0.372017       
+CRC32                    0.333332       
+std::hash                0.3223         
+MurmurHash3_x86_32       0.287107       
+CityHash64               0.246032       
