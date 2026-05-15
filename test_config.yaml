@@ -1,0 +1,22 @@
+weights:
+  collision: 0.15
+  ns_per_op: 0.25
+  entropy: 0.45
+  pearson: 0.15
+
+lambdas: 
+  - 0.5
+
+load_factors:
+  - 0.5
+
+hashes:
+  - CRC32
+  - MurmurHash3
+  - XXHash
+  - CityHash
+  - SHA256
+
+datasets:
+  - path: "datasets/spam.csv"
+    key: 1

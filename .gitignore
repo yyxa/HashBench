@@ -1,2 +1,9 @@
 build
 datasets
+collect_code.sh
+temp.txt
+venv
+output*
+images
+old
+collect.sh

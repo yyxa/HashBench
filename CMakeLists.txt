@@ -1,25 +1,33 @@
-cmake_minimum_required(VERSION 3.15)
+cmake_minimum_required(VERSION 3.14)
 project(HashBench)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-include_directories(include)
+find_package(yaml-cpp REQUIRED)
 
-file(GLOB_RECURSE CORE_SRC src/core/*.cpp)
-file(GLOB_RECURSE HASH_SRC src/hash/*.cpp)
-file(GLOB_RECURSE METRIC_SRC src/metric/*.cpp)
-file(GLOB_RECURSE DATASET_SRC src/dataset/*.cpp)
-file(GLOB_RECURSE CLI_SRC cli/*.cpp)
+add_library(framework_lib STATIC
+    src/core/ConfigLoader.cpp
+    src/core/Registry.cpp
+    src/core/ScoreFunction.cpp
+)
+
+target_include_directories(framework_lib PUBLIC ${CMAKE_SOURCE_DIR}/include)
 
 add_executable(hashbench
-    ${CORE_SRC}
-    ${HASH_SRC}
-    ${METRIC_SRC}
-    ${DATASET_SRC}
-    ${CLI_SRC}
+    cli/main.cpp
+
+    cli/dataset/CSVDataset.cpp
+    
+    cli/metric/CollisionRate.cpp
+    cli/metric/Speed.cpp
+    cli/metric/Entropy.cpp
+    cli/metric/PearsonChi2.cpp
 )
 
-target_compile_definitions(hashbench PRIVATE
-    PROJECT_ROOT="${CMAKE_SOURCE_DIR}"
+target_include_directories(hashbench PRIVATE
+    ${CMAKE_SOURCE_DIR}/include
+    ${CMAKE_SOURCE_DIR}/cli
 )
+
+target_link_libraries(hashbench PRIVATE framework_lib yaml-cpp)

@@ -1,31 +1,24 @@
-// include/core/Registry.hpp
 #pragma once
-#include <vector>
-#include <memory>
+#include <unordered_map>
 #include <functional>
 #include <string>
-
-#include "IHash.hpp"
-#include "IMetric.hpp"
-#include "IDataset.hpp"
+#include <vector>
+#include "CoreTypes.hpp"
 
 class Registry {
+private:
+    std::unordered_map<std::string, std::function<HashPtr()>> hashFactories;
+    std::unordered_map<std::string, std::function<MetricPtr()>> metricFactories;
+
 public:
     static Registry& instance();
 
-    using HashFactory = std::function<std::shared_ptr<IHash>()>;
-    using MetricFactory = std::function<std::shared_ptr<IMetric>()>;
-    using DatasetFactory = std::function<std::shared_ptr<IDataset>()>;
+    void registerHash(const std::string& name, std::function<HashPtr()> f);
+    void registerMetric(const std::string& name, std::function<MetricPtr()> f);
 
-    std::vector<HashFactory> hashFactories;
-    std::vector<MetricFactory> metricFactories;
-    std::vector<DatasetFactory> datasetFactories;
+    HashList createHashes(const std::vector<std::string>& names) const;
+    MetricList createMetrics(const std::vector<std::string>& names) const;
 
-    void registerHash(HashFactory f);
-    void registerMetric(MetricFactory f);
-    void registerDataset(DatasetFactory f);
-
-    std::vector<std::shared_ptr<IHash>> createHashes() const;
-    std::vector<std::shared_ptr<IMetric>> createMetrics() const;
-    std::vector<std::shared_ptr<IDataset>> createDatasets() const;
+    void validateHashes(const std::vector<std::string>& names) const;
+    void validateMetrics(const std::vector<std::string>& names) const;
 };

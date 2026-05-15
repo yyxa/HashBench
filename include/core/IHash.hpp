@@ -1,4 +1,3 @@
-// include/core/IHash.hpp
 #pragma once
 
 #include <string>

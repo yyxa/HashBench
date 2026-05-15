@@ -1,6 +1,4 @@
-// include/core/CoreTypes.hpp
 #pragma once
-
 #include <memory>
 #include <vector>
 
@@ -14,4 +12,3 @@ using DatasetPtr = std::shared_ptr<IDataset>;
 
 using HashList = std::vector<HashPtr>;
 using MetricList = std::vector<MetricPtr>;
-using DatasetList = std::vector<DatasetPtr>;
