@@ -6,13 +6,13 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 find_package(yaml-cpp REQUIRED)
 
-add_library(framework_lib STATIC
+add_library(hashbench_framework STATIC
     src/core/ConfigLoader.cpp
     src/core/Registry.cpp
     src/core/ScoreFunction.cpp
 )
 
-target_include_directories(framework_lib PUBLIC ${CMAKE_SOURCE_DIR}/include)
+target_include_directories(hashbench_framework PUBLIC ${CMAKE_SOURCE_DIR}/include)
 
 add_executable(hashbench
     cli/main.cpp
@@ -30,4 +30,4 @@ target_include_directories(hashbench PRIVATE
     ${CMAKE_SOURCE_DIR}/cli
 )
 
-target_link_libraries(hashbench PRIVATE framework_lib yaml-cpp)
+target_link_libraries(hashbench PRIVATE hashbench_framework yaml-cpp)
